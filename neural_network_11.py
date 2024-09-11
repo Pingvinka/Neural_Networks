@@ -85,15 +85,14 @@ ids = np.array(Train['id'])
 train_dir = '/content/Data/Train'
 test_dir = '/content/Data/Test'
 
-# Определите размер изображений
 img_width, img_height = 256, 256
 
 # Функция для загрузки и предобработки изображения
 def load_and_preprocess_image(img_path):
     img = Image.open(img_path)
-    img = img.resize((img_width, img_height)) # Измените размер изображения
+    img = img.resize((img_width, img_height)) 
     img = image.img_to_array(img)
-    img = img / 255.0 # Нормализуйте значения пикселей
+    img = img / 255.0
     return img
 
 # Загрузка тренировочных данных
